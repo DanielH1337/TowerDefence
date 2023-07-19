@@ -204,85 +204,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20835695}
   m_CullTransparentMesh: 1
---- !u!1001 &25927825
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 152457276572679390, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: ShapeModule.angle
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 152457276572679390, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 212157972036257775, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_Name
-      value: Smoke
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.336
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1783970330272330496, guid: 021a88eff0fde1d47a40d5c0c69fe9ec,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 021a88eff0fde1d47a40d5c0c69fe9ec, type: 3}
 --- !u!1 &41198185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,6 +2236,7 @@ MonoBehaviour:
   towerBaseParent: {fileID: 1157716187}
   rotateSpeed: 100
   speed: 40
+  canMove: 1
 --- !u!1 &1627728873
 GameObject:
   m_ObjectHideFlags: 0

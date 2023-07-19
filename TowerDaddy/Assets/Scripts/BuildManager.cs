@@ -55,6 +55,7 @@ public class BuildManager : MonoBehaviour
         {
             GameObject level =  Instantiate(levelPrefab, towerBase.transform.position + new Vector3(0, 8 + 10 * (towerLevels.Count), 0), Quaternion.identity);
             currentLevel = level.GetComponent<TowerLevel>();
+            level.transform.parent = towerBase.transform;
             towerLevels.Add(level);
             towerLevel = towerLevels.Count;
             MoveCamera(towerLevels.Count);
@@ -156,7 +157,7 @@ public class BuildManager : MonoBehaviour
         turretAngleText.text = currentLevel.angle.ToString();
         StopAllCoroutines();
         Vector3 beginPos = cameraRotator.transform.position;
-        Vector3 endPos = new Vector3(0f, towerBase.transform.position.y +10*currentLevelNumber, 0);
+        Vector3 endPos = new Vector3(towerBase.transform.position.x, towerBase.transform.position.y +10*currentLevelNumber, towerBase.transform.position.z);
         
         StartCoroutine(Move(beginPos, endPos, 1));
 
@@ -191,11 +192,14 @@ public class BuildManager : MonoBehaviour
 
     IEnumerator Move(Vector3 beginPos, Vector3 endPos, float time)
     {
+        cameraRotator.GetComponent<RotateCamera>().canMove = false;
+        
         for (float t = 0; t < 1; t += Time.deltaTime / time)
         {
             cameraRotator.transform.position = Vector3.Lerp(beginPos, endPos, t);
             yield return null;
         }
+        cameraRotator.GetComponent<RotateCamera>().canMove = true;
     }
 
 
