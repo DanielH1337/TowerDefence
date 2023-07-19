@@ -187,10 +187,7 @@ public class BuildManager : MonoBehaviour
 
 
     }
-
-
-
-
+     
 
     IEnumerator Move(Vector3 beginPos, Vector3 endPos, float time)
     {
