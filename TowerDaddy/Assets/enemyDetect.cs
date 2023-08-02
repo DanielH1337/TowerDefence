@@ -6,7 +6,7 @@ public class enemyDetect : MonoBehaviour
 {
     public Vector3 enemyTransform;
 
-    public GameObject TurretBasic;
+    public GameObject[] TurretBasic;
 
     public GameObject bullet;
     
@@ -27,7 +27,7 @@ public class enemyDetect : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            TurretBasic.GetComponent<ProjectileGun>().canShoot = true;
+            
             enemyTransform = other.transform.position;
             bullet.GetComponent<bullet>().enemy.transform.position = enemyTransform;
        
@@ -35,6 +35,28 @@ public class enemyDetect : MonoBehaviour
         else
         {
             enemyTransform = Vector3.forward;
+        
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        // TurretBasic.GetComponents<ProjectileGun>().canShoot = true;
+        TurretBasic = GameObject.FindGameObjectsWithTag("Turret");
+        foreach (GameObject turret in TurretBasic)
+        {
+            turret.GetComponent<ProjectileGun>().activateShooting = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        StopShooting();
+    }
+    public void StopShooting()
+    {
+        foreach (GameObject turret in TurretBasic)
+        {
+            turret.GetComponent<ProjectileGun>().activateShooting = false;
+        }
+    }
+
 }

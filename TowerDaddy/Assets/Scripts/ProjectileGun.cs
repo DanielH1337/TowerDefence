@@ -7,15 +7,26 @@ public class ProjectileGun : MonoBehaviour
     public Transform firepoint;
     public GameObject bulletPrefab;
 
-    public bool canShoot =false;
+    public bool canShoot;
 
+    public bool activateShooting=false;
+
+    private void Start()
+    {
+        canShoot = true;
+        
+    }
     void Update()
     {
-        if (canShoot)
+        if (activateShooting)
         {
-            StartCoroutine(Shoot());
-            canShoot = false;
+            if (canShoot)
+            {
+                StartCoroutine(Shoot());
+                canShoot = false;
+            }
         }
+        
           
     }
     IEnumerator Shoot()

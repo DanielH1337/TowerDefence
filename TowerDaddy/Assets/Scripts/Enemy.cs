@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     {
         
         playerGO.GetComponent<Player>().takeDamage();
+        playerGO.GetComponentInChildren<enemyDetect>().StopShooting();
         Destroy(gameObject);
     }
 }
