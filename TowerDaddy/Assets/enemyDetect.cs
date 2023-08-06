@@ -40,12 +40,16 @@ public class enemyDetect : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        // TurretBasic.GetComponents<ProjectileGun>().canShoot = true;
-        TurretBasic = GameObject.FindGameObjectsWithTag("Turret");
-        foreach (GameObject turret in TurretBasic)
+        if (other.CompareTag("Enemy"))
         {
-            turret.GetComponent<ProjectileGun>().activateShooting = true;
+            // TurretBasic.GetComponents<ProjectileGun>().canShoot = true;
+            TurretBasic = GameObject.FindGameObjectsWithTag("Turret");
+            foreach (GameObject turret in TurretBasic)
+            {
+                turret.GetComponent<ProjectileGun>().activateShooting = true;
+            }
         }
+        
     }
     private void OnTriggerExit(Collider other)
     {

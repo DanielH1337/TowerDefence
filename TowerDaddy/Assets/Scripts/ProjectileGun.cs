@@ -27,7 +27,6 @@ public class ProjectileGun : MonoBehaviour
             }
         }
         
-          
     }
     IEnumerator Shoot()
     {

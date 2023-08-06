@@ -19,8 +19,11 @@ public class Enemy : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        
-        playerGO.GetComponent<Player>().takeDamage();
+        //Take damage if enemy object collides with player
+        if (collision.gameObject.CompareTag("TowerBase"))
+        {
+            playerGO.GetComponent<Player>().takeDamage();
+        }
         playerGO.GetComponentInChildren<enemyDetect>().StopShooting();
         Destroy(gameObject);
     }
