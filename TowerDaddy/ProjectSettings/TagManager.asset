@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - Turret
+  - SliderPanel
   layers:
   - Default
   - TransparentFX

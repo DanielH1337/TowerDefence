@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 41198189}
   - component: {fileID: 41198188}
   - component: {fileID: 41198187}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PreviousLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 148700949}
   - component: {fileID: 148700951}
   - component: {fileID: 148700950}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 544578191}
   - component: {fileID: 544578193}
   - component: {fileID: 544578192}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1562,8 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692d2a4c05d994346b7dab6adde334ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretSelectCanvas: {fileID: 1383313354}
-  canvasScrollingSpeed: 0.5
+  SlidePanel: {fileID: 1383313359}
 --- !u!4 &746328263
 Transform:
   m_ObjectHideFlags: 0
@@ -1590,7 +1589,7 @@ GameObject:
   - component: {fileID: 752847032}
   - component: {fileID: 752847034}
   - component: {fileID: 752847033}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2050,9 +2049,10 @@ GameObject:
   - component: {fileID: 1383313357}
   - component: {fileID: 1383313356}
   - component: {fileID: 1383313358}
+  - component: {fileID: 1383313359}
   m_Layer: 5
   m_Name: LevelSettings
-  m_TagString: Untagged
+  m_TagString: SliderPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2135,6 +2135,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264561167f43cfd4f8bb39b37280f574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1383313359
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383313354}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a2df2f7007a7fd4f81096c4472789ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1396194590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2167,7 @@ GameObject:
   - component: {fileID: 1396194594}
   - component: {fileID: 1396194593}
   - component: {fileID: 1396194592}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: NextLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2708,7 +2728,7 @@ GameObject:
   - component: {fileID: 1627728877}
   - component: {fileID: 1627728876}
   - component: {fileID: 1627728875}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: AddLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
