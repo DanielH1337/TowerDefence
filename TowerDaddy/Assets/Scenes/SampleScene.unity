@@ -1562,6 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692d2a4c05d994346b7dab6adde334ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlidePanelGO: {fileID: 1383313354}
   SlidePanel: {fileID: 1383313359}
 --- !u!4 &746328263
 Transform:
@@ -2812,6 +2813,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 746328262}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: FirstPanelSlide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1627728876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3291,7 +3304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnedEnemy: {fileID: 2658801378754560891, guid: f6608386d58fc6540bd51826c85bf5bf,
     type: 3}
-  spawnTime: 1
+  spawnTime: 10
   enemySpawning: 1
 --- !u!4 &1938582562
 Transform:
