@@ -9,7 +9,9 @@ public class enemyDetect : MonoBehaviour
     public GameObject[] TurretBasic;
 
     public GameObject bullet;
-    
+
+    public GameObject[] bullets;
+    public List <GameObject> enemies = new List<GameObject>();
  
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,9 @@ public class enemyDetect : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        
+        
         if (other.CompareTag("Enemy"))
         {
             
@@ -42,6 +47,8 @@ public class enemyDetect : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            enemies.Add(other.gameObject);
+            StartCoroutine(ShootAllEnemiesInOrder());
             // TurretBasic.GetComponents<ProjectileGun>().canShoot = true;
             TurretBasic = GameObject.FindGameObjectsWithTag("Turret");
             foreach (GameObject turret in TurretBasic)
@@ -50,6 +57,15 @@ public class enemyDetect : MonoBehaviour
             }
         }
         
+    }
+    IEnumerator ShootAllEnemiesInOrder()
+    {
+        foreach (GameObject enemy in enemies)
+        {
+            enemyTransform = enemy.transform.position;
+            bullet.GetComponent<bullet>().enemy.transform.position = enemyTransform;
+            yield return null;
+        }
     }
     private void OnTriggerExit(Collider other)
     {

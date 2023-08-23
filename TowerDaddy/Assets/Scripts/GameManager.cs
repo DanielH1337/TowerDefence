@@ -9,15 +9,16 @@ public class GameManager : MonoBehaviour
     public GameObject SlidePanelGO;
     public Animator SlidePanel;
     private bool sliderCheck;
-    private float slidePanelPosition;
     //private float slidePanelPosition;
+    public BuildManager buildManager;
     private List<bool> SlidePanelCheckList = new List<bool>();
+    public GameObject[] enemyList;
 
     private void Start()
     {
+
         
-        slidePanelPosition = SlidePanelGO.transform.position.x;
-        Debug.Log(slidePanelPosition);
+        
         UILayer = LayerMask.NameToLayer("UI");
         sliderCheck =true;
         StartCoroutine(PanelSlider());
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        enemyList = GameObject.FindGameObjectsWithTag("Enemy");
         // print(IsPointerOverUIElement() ? "Over UI" : "Not over UI");
         if (Input.GetKeyDown("space"))
         {
@@ -39,7 +40,10 @@ public class GameManager : MonoBehaviour
     }
     public void FirstPanelSlide()
     {
-        StartCoroutine(SlidePanelDelayAway());
+        if(buildManager.towerLevels.Count == 1)
+        {
+            StartCoroutine(SlidePanelDelayAway());
+        }
     }
 
      
@@ -47,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1.1f);
+            yield return new WaitForSeconds(0.5f);
             if (sliderCheck)
             {
                 SlidePanelCheckList.Insert(0, IsPointerOverUIElement());
@@ -61,36 +65,25 @@ public class GameManager : MonoBehaviour
                 {
                     sliderCheck = false;
                     StartCoroutine(SlidePanelDelayAway());
-
                 }
-
             }
             if(SlidePanelCheckList.Count > 2)
             {
                 SlidePanelCheckList.RemoveAt(2);
             }
         }
-        
     }
     IEnumerator SlidePanelDelayBack()
     {
-       // Debug.Log("Back");
-       // SlidePanelGO.layer = 0;
         if (SlidePanel.isActiveAndEnabled) SlidePanel.SetTrigger("Back");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         sliderCheck = true;
-      //  SlidePanelGO.layer = 5;
-     
-        
     }
     IEnumerator SlidePanelDelayAway()
     {
-       // Debug.Log("Away");
-      //  SlidePanelGO.layer = 0;
         if (SlidePanel.isActiveAndEnabled) SlidePanel.SetTrigger("Away");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         sliderCheck = true;
-      //  SlidePanelGO.layer = 5;
 
     }
 

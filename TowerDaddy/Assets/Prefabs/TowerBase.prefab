@@ -277,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7383851828670200993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45931885, y: 0.609823, z: 0.03907967}
+  m_LocalPosition: {x: 0, y: -0.95, z: 0}
   m_LocalScale: {x: 2.617724, y: 10.470896, z: 2.617724}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -309,7 +309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd06811cab8e5d6429e804ffc6a5995c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyTransform: {x: 0, y: 0, z: 0}
+  TurretBasic: []
   bullet: {fileID: 4866294666245881824, guid: 8fe4835dcc7ba774a9a307a35406019c, type: 3}
+  bullets: []
+  enemies: []
 --- !u!1001 &2109093379551280364
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1564,6 +1564,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SlidePanelGO: {fileID: 1383313354}
   SlidePanel: {fileID: 1383313359}
+  buildManager: {fileID: 47502656}
+  enemyList: []
 --- !u!4 &746328263
 Transform:
   m_ObjectHideFlags: 0
@@ -3334,7 +3336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 330585546, guid: 9a0a3b4aab96d99418ab8d5a95a4f51d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30
+      value: -40.04
       objectReference: {fileID: 0}
     - target: {fileID: 1610184255, guid: 9a0a3b4aab96d99418ab8d5a95a4f51d, type: 3}
       propertyPath: m_StaticEditorFlags

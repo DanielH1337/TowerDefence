@@ -199,6 +199,7 @@ public class BuildManager : MonoBehaviour
             cameraRotator.transform.position = Vector3.Lerp(beginPos, endPos, t);
             yield return null;
         }
+       
         cameraRotator.GetComponent<RotateCamera>().canMove = true;
     }
 
