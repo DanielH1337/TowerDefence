@@ -3306,7 +3306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnedEnemy: {fileID: 2658801378754560891, guid: f6608386d58fc6540bd51826c85bf5bf,
     type: 3}
-  spawnTime: 10
+  spawnTime: 3
   enemySpawning: 1
 --- !u!4 &1938582562
 Transform:
@@ -3483,6 +3483,11 @@ PrefabInstance:
       propertyPath: enemyTransform
       value: 
       objectReference: {fileID: 1627588506}
+    - target: {fileID: 7383851828670200993, guid: 9a0a3b4aab96d99418ab8d5a95a4f51d,
+        type: 3}
+      propertyPath: m_TagString
+      value: BulletRange
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2140288567031183164, guid: 9a0a3b4aab96d99418ab8d5a95a4f51d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a0a3b4aab96d99418ab8d5a95a4f51d, type: 3}
